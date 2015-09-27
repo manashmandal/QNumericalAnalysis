@@ -1,7 +1,9 @@
+#include "qcustomplot.h"
 #include "bisectiongui.h"
 #include "ui_bisectiongui.h"
 #include <QTableWidgetItem>
 #include <QStringList>
+
 
 
 
@@ -22,8 +24,6 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     addItems(_xm, 3);
     addItems(_relativeError, 4);
     addItems(_fxm, 5);
-
-
 
 }
 

@@ -1,11 +1,15 @@
-#include "numericalmainwindow.h"
+
 #include <QApplication>
+
+
 #include <QWidget>
 #include <QPointer>
 #include <QLabel>
 
 #include "bisectionmethod.h"
 #include "bisectiongui.h"
+
+
 
 int main(int argc, char *argv[])
 {
