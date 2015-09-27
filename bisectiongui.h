@@ -13,9 +13,6 @@ class BisectionGUI : public QDialog, public BisectionMethod
 {
     Q_OBJECT
 
-
-
-
 public:
     explicit BisectionGUI(QWidget *parent = 0);
     ~BisectionGUI();

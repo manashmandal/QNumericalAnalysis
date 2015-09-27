@@ -6,6 +6,7 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     ui(new Ui::BisectionGUI)
 {
     ui->setupUi(this);
+    getStaticValues();
 }
 
 BisectionGUI::~BisectionGUI()

@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     BisectionGUI::applyBisectionMethod(.001);
 
     BisectionGUI gui;
-    gui.getStaticValues();
+//    gui.getStaticValues();
     print("START");
     foreach(double d, gui.get_xl()){
         print(d);
