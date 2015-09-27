@@ -12,3 +12,14 @@ BisectionGUI::~BisectionGUI()
 {
     delete ui;
 }
+
+void BisectionGUI::getStaticValues()
+{
+    _iterations = BisectionGUI::iterations;
+    _fxm = BisectionGUI::fxm;
+    _xl = BisectionGUI::xl;
+    _xm = BisectionGUI::xm;
+    _xu = BisectionGUI::xu;
+    _fxm = BisectionGUI::fxm;
+    _relativeError = BisectionGUI::relativeError;
+}
