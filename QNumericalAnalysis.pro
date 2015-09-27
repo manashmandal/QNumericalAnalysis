@@ -24,7 +24,8 @@ QMAKE_TARGET_COPYRIGHT = "Copyright (C) by Emanuel Eichhammer"
 
 
 
-FORMS    += numericalmainwindow.ui
+FORMS    += numericalmainwindow.ui \
+    bisectiongui.ui
 
 HEADERS += \
     lepton/CompiledExpression.h \
@@ -41,7 +42,8 @@ HEADERS += \
     numericalmainwindow.h \
     qcustomplot.h \
     qparser.h \
-    bisectionmethod.h
+    bisectionmethod.h \
+    bisectiongui.h
 
 SOURCES += \
     CompiledExpression.cpp \
@@ -54,5 +56,6 @@ SOURCES += \
     Parser.cpp \
     qcustomplot.cpp \
     qparser.cpp \
-    bisectionmethod.cpp
+    bisectionmethod.cpp \
+    bisectiongui.cpp
 
