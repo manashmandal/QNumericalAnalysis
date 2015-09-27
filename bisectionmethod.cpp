@@ -55,7 +55,7 @@ void BisectionMethod::applyBisectionMethod(double tolerance)
     //Initializing required vars
     double checkTolerance = 0;
     bool inside = false;
-    double iteration = 0;
+    double iteration = 1;
 
     //Getting the value before the bisec method
     xl.append(low);

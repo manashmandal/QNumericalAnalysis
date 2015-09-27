@@ -27,6 +27,7 @@ public:
     QVector_double get_iterations (void) { return iterations; }
     QVector_double get_relativeError (void) { return _relativeError; }
 
+    void addItems(QVector_double vec, int column);
 private:
     Ui::BisectionGUI *ui;
     QVector_double _xl;

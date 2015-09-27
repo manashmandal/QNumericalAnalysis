@@ -17,10 +17,7 @@ int main(int argc, char *argv[])
 
     BisectionGUI gui;
 //    gui.getStaticValues();
-    print("START");
-    foreach(double d, gui.get_xl()){
-        print(d);
-    }
+    gui.show();
 
     return a.exec();
 }
