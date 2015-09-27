@@ -10,13 +10,13 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     getStaticValues();
 
     ui->tableWidget->setRowCount(_iterations.size());
+
     addItems(_iterations, 0);
     addItems(_xl, 1);
     addItems(_xu, 2);
     addItems(_xm, 3);
     addItems(_relativeError, 4);
     addItems(_fxm, 5);
-
 }
 
 BisectionGUI::~BisectionGUI()
