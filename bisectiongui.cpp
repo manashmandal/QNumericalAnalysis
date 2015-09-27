@@ -1,6 +1,9 @@
 #include "bisectiongui.h"
 #include "ui_bisectiongui.h"
 #include <QTableWidgetItem>
+#include <QStringList>
+
+
 
 BisectionGUI::BisectionGUI(QWidget *parent) :
     QDialog(parent),
@@ -8,6 +11,8 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
 {
     ui->setupUi(this);
     getStaticValues();
+    ui->tableWidget->setColumnCount(6);
+    ui->tableWidget->setHorizontalHeaderLabels(QStringList() << "Iterations" << "xl" << "xu" << "xm" << "Relative Error (%)" << "f(x_m)");
 
     ui->tableWidget->setRowCount(_iterations.size());
 
@@ -17,6 +22,9 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     addItems(_xm, 3);
     addItems(_relativeError, 4);
     addItems(_fxm, 5);
+
+
+
 }
 
 BisectionGUI::~BisectionGUI()
@@ -43,3 +51,5 @@ void BisectionGUI::getStaticValues()
     _fxm = BisectionGUI::fxm;
     _relativeError = BisectionGUI::relativeError;
 }
+
+

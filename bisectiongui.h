@@ -28,6 +28,8 @@ public:
     QVector_double get_relativeError (void) { return _relativeError; }
 
     void addItems(QVector_double vec, int column);
+private slots:
+
 private:
     Ui::BisectionGUI *ui;
     QVector_double _xl;
