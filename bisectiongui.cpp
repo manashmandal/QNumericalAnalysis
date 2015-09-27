@@ -3,6 +3,7 @@
 #include "ui_bisectiongui.h"
 #include <QTableWidgetItem>
 #include <QStringList>
+#include <QPushButton>
 
 
 
@@ -53,3 +54,8 @@ void BisectionGUI::getStaticValues()
 }
 
 
+
+void BisectionGUI::on_graphButton_clicked()
+{
+
+}

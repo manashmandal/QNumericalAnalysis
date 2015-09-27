@@ -30,6 +30,8 @@ public:
     void addItems(QVector_double vec, int column);
 private slots:
 
+    void on_graphButton_clicked();
+
 private:
     Ui::BisectionGUI *ui;
     QVector_double _xl;
