@@ -1,5 +1,6 @@
 #ifndef BISECTIONMETHOD_H
 #define BISECTIONMETHOD_H
+#include "qcustomplot.h"
 #include "qparser.h"
 #include <QVector>
 #include <QTableWidget>

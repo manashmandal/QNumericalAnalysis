@@ -4,6 +4,8 @@
 #include <QTableWidgetItem>
 #include <QStringList>
 #include <QPushButton>
+#include <QMouseEvent>
+#include <QLayout>
 
 
 BisectionGUI::BisectionGUI(QWidget *parent) :
@@ -23,6 +25,8 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     addItems(_xm, 3);
     addItems(_relativeError, 4);
     addItems(_fxm, 5);
+
+    ui->tableWidget->resizeColumnsToContents();
 }
 
 BisectionGUI::~BisectionGUI()
@@ -39,6 +43,9 @@ void BisectionGUI::addItems(QVector_double vec, int column)
     }
 }
 
+
+
+
 void BisectionGUI::getStaticValues()
 {
     _iterations = BisectionGUI::iterations;
@@ -52,9 +59,10 @@ void BisectionGUI::getStaticValues()
 
 
 
+
 void BisectionGUI::on_graphButton_clicked()
 {
-    QCustomPlot *plot = new QCustomPlot;
+    plot = new QCustomPlot;
 
     int diff = _iterations.size() - _relativeError.size();
     QVector <double> iter;
@@ -67,6 +75,15 @@ void BisectionGUI::on_graphButton_clicked()
     plot->graph(0)->setData(iter, _relativeError);
     plot->xAxis->rescale();
     plot->yAxis->rescale();
+    plot->rescaleAxes();
     plot->replot();
+    plot->setMinimumHeight(this->height());
+    plot->setMinimumWidth(this->width());
+    plot->setWindowModality(Qt::WindowModal);
     plot->show();
+}
+
+void BisectionGUI::on_hideGraphButton_clicked()
+{
+    if (plot->isVisible()) plot->hide();
 }

@@ -2,6 +2,7 @@
 #define BISECTIONGUI_H
 
 #include <QDialog>
+
 #include "bisectionmethod.h"
 
 
@@ -15,6 +16,9 @@ class BisectionGUI : public QDialog, public BisectionMethod
 
 public:
     explicit BisectionGUI(QWidget *parent = 0);
+
+
+
     ~BisectionGUI();
 
     void getStaticValues(void);
@@ -27,10 +31,13 @@ public:
     QVector_double get_iterations (void) { return iterations; }
     QVector_double get_relativeError (void) { return _relativeError; }
 
+
     void addItems(QVector_double vec, int column);
 private slots:
 
     void on_graphButton_clicked();
+
+    void on_hideGraphButton_clicked();
 
 private:
     Ui::BisectionGUI *ui;
@@ -40,6 +47,8 @@ private:
     QVector_double _fxm;
     QVector_double _iterations;
     QVector_double _relativeError;
+    QCustomPlot *plot;
+
 };
 
 #endif // BISECTIONGUI_H

@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>627</width>
-    <height>357</height>
+    <width>376</width>
+    <height>416</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -31,6 +31,13 @@
         <widget class="QLabel" name="label">
          <property name="text">
           <string>Click the button to generate Iteration vs Error graph</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="hideGraphButton">
+         <property name="text">
+          <string>Hide Graph</string>
          </property>
         </widget>
        </item>
