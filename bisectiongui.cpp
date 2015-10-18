@@ -25,7 +25,6 @@ BisectionGUI::BisectionGUI(QWidget *parent) :
     addItems(_xm, 3);
     addItems(_relativeError, 4);
     addItems(_fxm, 5);
-
     ui->tableWidget->resizeColumnsToContents();
 }
 
@@ -79,11 +78,8 @@ void BisectionGUI::on_graphButton_clicked()
     plot->replot();
     plot->setMinimumHeight(this->height());
     plot->setMinimumWidth(this->width());
-    plot->setWindowModality(Qt::WindowModal);
+    plot->setWindowModality(Qt::ApplicationModal);
     plot->show();
 }
 
-void BisectionGUI::on_hideGraphButton_clicked()
-{
-    if (plot->isVisible()) plot->hide();
-}
+

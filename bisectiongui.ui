@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>376</width>
+    <width>446</width>
     <height>416</height>
    </rect>
   </property>
@@ -31,13 +31,6 @@
         <widget class="QLabel" name="label">
          <property name="text">
           <string>Click the button to generate Iteration vs Error graph</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="hideGraphButton">
-         <property name="text">
-          <string>Hide Graph</string>
          </property>
         </widget>
        </item>

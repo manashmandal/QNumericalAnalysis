@@ -47,6 +47,7 @@ private:
 
     mapIterator *variableMapIterator;
 
+
 };
 
 #endif // NUMERICALMAINWINDOW_H
