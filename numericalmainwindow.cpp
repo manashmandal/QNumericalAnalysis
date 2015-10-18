@@ -22,9 +22,12 @@ NumericalMainWindow::NumericalMainWindow(QWidget *parent) :
 void NumericalMainWindow::getExpressionText(QString input)
 {
 //    QParser::setValues(input.toStdString(), ui->varValueLineEdit->text());
+    QParser::clear();
 
     QParser::setExpression(input);
     printStdString(QParser::getExpression()); // Debugging purpose
+
+
 
     QString variable_list;
 
