@@ -27,8 +27,6 @@ void NumericalMainWindow::getExpressionText(QString input)
     QParser::setExpression(input);
     printStdString(QParser::getExpression()); // Debugging purpose
 
-
-
     QString variable_list;
 
     foreach(QString s, QParser::getVar()){

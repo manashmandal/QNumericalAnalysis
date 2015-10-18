@@ -43,7 +43,8 @@ HEADERS += \
     qcustomplot.h \
     qparser.h \
     bisectionmethod.h \
-    bisectiongui.h
+    bisectiongui.h \
+    falseposition.h
 
 SOURCES += \
     CompiledExpression.cpp \
@@ -57,5 +58,6 @@ SOURCES += \
     qcustomplot.cpp \
     qparser.cpp \
     bisectionmethod.cpp \
-    bisectiongui.cpp
+    bisectiongui.cpp \
+    falseposition.cpp
 
