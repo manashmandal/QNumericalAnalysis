@@ -44,7 +44,7 @@ void FalsePosition::calculateXr(){
 }
 
 //Constructor
-void FalsePosition::FalsePosition(double lo, double hi, std::string expr){
+FalsePosition::FalsePosition(double lo, double hi, std::string expr){
     FalsePosition::initFalsePosition(lo, hi, expr);
 }
 
@@ -125,7 +125,7 @@ void FalsePosition::applyFalsePosition(double tolerance)
         //Assigining new calculated xr value
         xr_new = FalsePosition::r;
 
-
+        qDebug() << "root : " << xr_new;
 
         //Calculating error
         calculateRelativeError(xr_new, xr_old);

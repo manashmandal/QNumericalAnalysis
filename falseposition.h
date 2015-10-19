@@ -26,7 +26,7 @@ public:
     static double f_low(void);
     static double f_r(void);
     static double f_high(void);
-    static double fx(void);
+    static double fx(std::string expr, QString val);
     static void calculateXr(void);
     static double calculateRelativeError(double xr_new, double xr_old);
 
@@ -40,6 +40,7 @@ public:
     static void applyFalsePosition(double tolerance);
 
     FalsePosition();
+    FalsePosition(double lo, double hi, std::string expr);
 };
 
 #endif // FALSEPOSITION_H
