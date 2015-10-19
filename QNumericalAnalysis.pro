@@ -44,7 +44,8 @@ HEADERS += \
     qparser.h \
     bisectionmethod.h \
     bisectiongui.h \
-    falseposition.h
+    falseposition.h \
+    fixedpointiteration.h
 
 SOURCES += \
     CompiledExpression.cpp \
@@ -59,5 +60,6 @@ SOURCES += \
     qparser.cpp \
     bisectionmethod.cpp \
     bisectiongui.cpp \
-    falseposition.cpp
+    falseposition.cpp \
+    fixedpointiteration.cpp
 
