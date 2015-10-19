@@ -9,6 +9,7 @@
 #include "bisectionmethod.h"
 #include "bisectiongui.h"
 #include "numericalmainwindow.h"
+#include "falseposition.h"
 
 
 int main(int argc, char *argv[])
@@ -17,6 +18,7 @@ int main(int argc, char *argv[])
 
     NumericalMainWindow w;
     w.show();
+
 
 
 //    std::string expr("x^3-0.165*x^2+3.993*10^-4");

@@ -1,5 +1,6 @@
 #include "numericalmainwindow.h"
 #include "ui_numericalmainwindow.h"
+#include <QMessageBox>
 
 #include "qparser.h"
 #define empty ""
@@ -43,8 +44,13 @@ void NumericalMainWindow::getExpressionText(QString input)
 void NumericalMainWindow::assignValues()
 {
     QParser temp;
+    double res;
 
-   qDebug() << temp.calculateExpression(QParser::getExpression(), ui->varValueLineEdit->text());
+   res = temp.calculateExpression(QParser::getExpression(), ui->varValueLineEdit->text());
+
+   QString result = "The result is %1";
+
+   QMessageBox::information(this, "Result", result.arg(res));
 
 }
 
