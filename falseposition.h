@@ -52,6 +52,10 @@ public:
     //Use initFalsePosition before using this function
     static int applyFalsePosition(double tolerance, int max_retry);
 
+    //Use modified falseposition
+    static double applyModifiedFalsePosition(double lo, double hi, std::string expression, double tolerance, int max_retry);
+    static double applyModifiedFalsePosition(double tolerance, int max_retry);
+
 
     //Initializer
     static void initFalsePosition(double lo, double hi, std::string expr);

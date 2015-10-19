@@ -257,3 +257,56 @@ void FalsePosition::clearAll(){
     FalsePosition::relativeErrors.clear();
     FalsePosition::relative_error = 0;
 }
+
+double FalsePosition::applyModifiedFalsePosition(double lo, double hi, std::string expression, double tolerance, int max_retry){
+    FalsePosition::initFalsePosition(lo, hi, expression);
+    //initializing side
+    int side = 0;
+    int times = 0;
+
+    double fxr = calculate_xr();
+    //Function value for low and high
+    double fxu = f_high();
+    double fxl = f_low();
+
+    //Setting the iteration to 1
+    FalsePosition::iteration = 1;
+    FalsePosition::iterations.append(iteration);
+
+    //Pushing the value to the stack
+    FalsePosition::xu.append(FalsePosition::high);
+    FalsePosition::xl.append(FalsePosition::low);
+    FalsePosition::xr.append(FalsePosition::r);
+
+    //Making sure the number of retry is positive
+    max_retry = qAbs(max_retry);
+
+    while (times < max_retry){
+        //breaks if high - low < tolerance (high + low)
+
+        if (qAbs(FalsePosition::low - FalsePosition::high) < (tolerance * qAbs(FalsePosition::low + FalsePosition::high))) break;
+
+        fxr = calculate_xr();
+
+        if (fxr * fxu > 0){
+            fxu = fxr;
+            FalsePosition::high = FalsePosition::r;
+            if (side == -1) fxl /= 2;
+            side = -1;
+        } else if (fxl * fxr > 0){
+            FalsePosition::low = FalsePosition::r;
+            fxl = fxr;
+            if (side == +1) fxu /= 2;
+            side = +1;
+        } else {
+            break;
+        }
+
+        times++;
+
+        print("in the loop");
+    }
+
+    return FalsePosition::r;
+
+}
