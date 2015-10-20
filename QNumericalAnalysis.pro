@@ -45,7 +45,8 @@ HEADERS += \
     bisectionmethod.h \
     bisectiongui.h \
     falseposition.h \
-    fixedpointiteration.h
+    fixedpointiteration.h \
+    newtonraphson.h
 
 SOURCES += \
     CompiledExpression.cpp \
@@ -61,5 +62,6 @@ SOURCES += \
     bisectionmethod.cpp \
     bisectiongui.cpp \
     falseposition.cpp \
-    fixedpointiteration.cpp
+    fixedpointiteration.cpp \
+    newtonraphson.cpp
 
