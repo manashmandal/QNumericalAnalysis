@@ -39,6 +39,7 @@ double NewtonRaphson::applyNewtonRaphson(double tolerance, int max_trial){
         NewtonRaphson::iterations.append(iteration);
 
         if (iterations.size() > max_trial) break;
+        else if (NewtonRaphson::relative_error < tolerance) break;
 
         cout << "error : " << relative_error << endl;
 
